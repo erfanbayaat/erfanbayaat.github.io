@@ -51,7 +51,7 @@ function App() {
           </span>
         </h1>
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-6 lg:gap-12 flex-row-reverse">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-6 lg:gap-12">
           {/* Game Board Section */}
           <div className="w-full max-w-md lg:max-w-none lg:flex-1 flex flex-col items-center">
             <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-2xl shadow-xl p-4 sm:p-6 mb-4">
