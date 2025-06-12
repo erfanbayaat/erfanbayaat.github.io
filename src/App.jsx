@@ -57,7 +57,7 @@ function App() {
             <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-2xl shadow-xl p-4 sm:p-6 mb-4">
               <div className="mb-4 flex justify-between items-center">
                 <span className="text-lg font-medium text-gray-700">
-                  Current Turn: 
+                  نوبت فعلی:
                 </span>
                 <span className={`text-2xl font-bold ${xIsNext ? 'text-blue-600' : 'text-purple-600'}`}>
                   {xIsNext ? "X" : "O"}
@@ -74,14 +74,14 @@ function App() {
               {gameStatus === "won" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-green-600 animate-pulse">
-                    {winner} wins!
+                    {winner} برنده شد
                   </p>
                 </div>
               )}
               {gameStatus === "draw" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-yellow-600 animate-pulse">
-                    It's a draw!
+                    مساوی شد!
                   </p>
                 </div>
               )}
@@ -92,13 +92,13 @@ function App() {
                 onClick={resetBoard}
                 className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95"
               >
-                Reset Board
+                ریست کردن کامل
               </button>
               <button
                 onClick={resetGame}
                 className="px-6 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95"
               >
-                New Game
+                بازی جدید
               </button>
             </div>
           </div>
@@ -116,15 +116,15 @@ function App() {
                 <ul className="text-gray-600 space-y-2">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
-                    First player is randomly selected
+                    اولین بازیکن به صورت تصادفی انتخاب می‌شود
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
-                    X always goes first in new games
+                    X همیشه در بازی‌های جدید حرف اول شروع میکند  .
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
-                    Win by getting 3 in a row
+                    با پر کردن 3 خانه متوالی برنده شوید .
                   </li>
                 </ul>
               </div>
