@@ -107,12 +107,12 @@ function App() {
           <div className="w-full max-w-md lg:max-w-none lg:flex-1">
             <div className="bg-white rounded-2xl shadow-xl p-6 w-full">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-                Game Statistics
+                آمار بازی
               </h2>
               <ScoreBoard scores={scores} />
               
               <div className="mt-8">
-                <h3 className="text-lg font-semibold text-gray-700 mb-3">Game Rules</h3>
+                <h3 className="text-lg font-semibold text-gray-700 mb-3">قوانین بازی</h3>
                 <ul className="text-gray-600 space-y-2">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
