@@ -82,13 +82,13 @@ function App() {
                   </p>
                 </div>
               )}
-              {gameStatus === "draw" && (
+              {/* {gameStatus === "draw" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-yellow-600 animate-pulse">
                     Draw !
                   </p>
                 </div>
-              )}
+              )} */}
             </div>
 
             <div className="flex gap-4 mt-2">
