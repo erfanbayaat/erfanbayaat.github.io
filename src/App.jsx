@@ -59,22 +59,26 @@ function App() {
                 <span className="text-lg font-medium text-gray-700">
                   turn :
                 </span>
-                <span className={`text-2xl font-bold ${xIsNext ? 'text-blue-600' : 'text-purple-600'}`}>
+                <span
+                  className={`text-2xl font-bold ${
+                    xIsNext ? "text-blue-600" : "text-purple-600"
+                  }`}
+                >
                   {xIsNext ? "X" : "O"}
                 </span>
               </div>
-              
+
               <Board
                 squares={squares}
                 onSquareClick={handleClick}
                 currentPlayer={xIsNext ? "X" : "O"}
                 winner={winner}
               />
-              
+
               {gameStatus === "won" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-green-600 animate-pulse">
-                    {winner}  Wins !
+                    {winner} Wins !
                   </p>
                 </div>
               )}
@@ -98,7 +102,7 @@ function App() {
                 onClick={resetGame}
                 className="px-6 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95"
               >
-                New Game 
+                New Game
               </button>
             </div>
           </div>
@@ -110,17 +114,19 @@ function App() {
                 game statistics
               </h2>
               <ScoreBoard scores={scores} />
-              
+
               <div className="mt-8">
-                <h3 className="text-lg font-semibold text-gray-700 mb-3">game rules : </h3>
+                <h3 className="text-lg font-semibold text-gray-700 mb-3">
+                  game rules :{" "}
+                </h3>
                 <ul className="text-gray-600 space-y-2">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
                     first player is randomly selected.
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2">•</span>
-                    X always goes first in new fames.
+                    <span className="text-blue-500 mr-2">•</span>X always goes
+                    first in new fames.
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
@@ -140,9 +146,14 @@ export default App;
 
 function calculateWinner(sq) {
   const lines = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8],
-    [0, 3, 6], [1, 4, 7], [2, 5, 8],
-    [0, 4, 8], [2, 4, 6],
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
   ];
   for (let [a, b, c] of lines) {
     if (sq[a] && sq[a] === sq[b] && sq[a] === sq[c]) return sq[a];
