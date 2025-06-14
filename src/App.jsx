@@ -57,7 +57,7 @@ function App() {
             <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-2xl shadow-xl p-4 sm:p-6 mb-4">
               <div className="mb-4 flex justify-between items-center">
                 <span className="text-lg font-medium text-gray-700">
-                  نوبت فعلی:
+                  turn :
                 </span>
                 <span className={`text-2xl font-bold ${xIsNext ? 'text-blue-600' : 'text-purple-600'}`}>
                   {xIsNext ? "X" : "O"}
@@ -74,14 +74,14 @@ function App() {
               {gameStatus === "won" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-green-600 animate-pulse">
-                    {winner} برنده شد
+                    {winner}  Wins !
                   </p>
                 </div>
               )}
               {gameStatus === "draw" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-yellow-600 animate-pulse">
-                    مساوی شد!
+                    Draw !
                   </p>
                 </div>
               )}
@@ -92,13 +92,13 @@ function App() {
                 onClick={resetBoard}
                 className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95"
               >
-                ریست کردن کامل
+                Reset Board
               </button>
               <button
                 onClick={resetGame}
                 className="px-6 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95"
               >
-                بازی جدید
+                New Game 
               </button>
             </div>
           </div>
@@ -107,24 +107,24 @@ function App() {
           <div className="w-full max-w-md lg:max-w-none lg:flex-1">
             <div className="bg-white rounded-2xl shadow-xl p-6 w-full">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-                آمار بازی
+                game statistics
               </h2>
               <ScoreBoard scores={scores} />
               
               <div className="mt-8">
-                <h3 className="text-lg font-semibold text-gray-700 mb-3">قوانین بازی</h3>
+                <h3 className="text-lg font-semibold text-gray-700 mb-3">game rules : </h3>
                 <ul className="text-gray-600 space-y-2">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
-                    اولین بازیکن به صورت تصادفی انتخاب می‌شود
+                    first player is randomly selected.
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
-                    X همیشه در بازی‌های جدید حرف اول شروع میکند  .
+                    X always goes first in new fames.
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
-                    با پر کردن 3 خانه متوالی برنده شوید .
+                    Win by getting 3 in a row.
                   </li>
                 </ul>
               </div>
