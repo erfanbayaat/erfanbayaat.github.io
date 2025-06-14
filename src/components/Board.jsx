@@ -12,8 +12,8 @@ function Board({ squares, onSquareClick, currentPlayer, winner }) {
     <div className="flex flex-col items-center">
       <div className="mb-4 text-xl">
         {winner
-          ? `برنده: ${winner}`
-          : `نوبت بازیکن: ${currentPlayer}`}
+          ? `winner : ${winner}`
+          : ` current Player: ${currentPlayer}`}
       </div>
       <div className="grid grid-cols-3 gap-1">
         {squares.map((val, idx) => (
