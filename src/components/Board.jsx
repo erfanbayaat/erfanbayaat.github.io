@@ -1,17 +1,11 @@
 import React from "react";
-function Square({ value, onClick }) {
-  return (
-    <button onClick={onClick} className="w-16 h-16 text-2xl border">
-      {value}
-    </button>
-  );
-}
+import Square from "./Square";
 
-function Board({ squares, onSquareClick, currentPlayer, winner }) {
+export default function Board({ squares, onSquareClick, currentPlayer, winner }) {
   return (
     <div className="flex flex-col items-center">
       <div className="mb-4 text-xl">
-        {winner ? `winner : ${winner}` : ` current Player: ${currentPlayer}`}
+        {winner ? `Winner: ${winner}` : `Current Player: ${currentPlayer}`}
       </div>
       <div className="grid grid-cols-3 gap-1">
         {squares.map((val, idx) => (
@@ -21,5 +15,3 @@ function Board({ squares, onSquareClick, currentPlayer, winner }) {
     </div>
   );
 }
-
-export default Board;
