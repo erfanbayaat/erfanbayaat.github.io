@@ -57,7 +57,7 @@ function App() {
             <div className="w-full max-w-xs sm:max-w-sm bg-white rounded-2xl shadow-xl p-4 sm:p-6 mb-4">
               <div className="mb-4 flex justify-between items-center">
                 <span className="text-lg font-medium text-gray-700">
-                  turn :
+                  Turn:
                 </span>
                 <span
                   className={`text-2xl font-bold ${
@@ -78,14 +78,14 @@ function App() {
               {gameStatus === "won" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-green-600 animate-pulse">
-                    {winner} Wins !
+                    {winner} Wins!
                   </p>
                 </div>
               )}
               {gameStatus === "draw" && (
                 <div className="mt-4 text-center">
                   <p className="text-xl font-bold text-yellow-600 animate-pulse">
-                    Draw !
+                    It's a draw!
                   </p>
                 </div>
               )}
@@ -111,22 +111,22 @@ function App() {
           <div className="w-full max-w-md lg:max-w-none lg:flex-1">
             <div className="bg-white rounded-2xl shadow-xl p-6 w-full">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">
-                game statistics
+                Game Statistics
               </h2>
               <ScoreBoard scores={scores} />
 
               <div className="mt-8">
                 <h3 className="text-lg font-semibold text-gray-700 mb-3">
-                  game rules :{" "}
+                  Game Rules:
                 </h3>
                 <ul className="text-gray-600 space-y-2">
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
-                    first player is randomly selected.
+                    The first player is randomly selected.
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-500 mr-2">•</span>X always goes
-                    first in new fames.
+                    <span className="text-blue-500 mr-2">•</span>
+                    X always goes first in new games.
                   </li>
                   <li className="flex items-start">
                     <span className="text-blue-500 mr-2">•</span>
@@ -159,4 +159,4 @@ function calculateWinner(sq) {
     if (sq[a] && sq[a] === sq[b] && sq[a] === sq[c]) return sq[a];
   }
   return null;
-}
+              }
