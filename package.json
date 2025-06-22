@@ -1,21 +1,20 @@
 {
-  "name": "traffic-light",
+  "name": "tic-tac-toe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://erfanbayaat.github.io/traficlight",
   "scripts": {
     "dev": "vite",
-    "build": "react-scripts build",
-    "start": "react-scripts start",
-    "lint": "eslint .",
+    "build": "vite build",
     "preview": "vite preview",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint ."
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
