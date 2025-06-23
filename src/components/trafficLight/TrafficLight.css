@@ -1,5 +1,5 @@
 :root {
-  /* رنگ‌ها */
+
   --red-light: radial-gradient(circle at 30% 30%, #ff5a5a, #c00000, #8a0000);
   --yellow-light: radial-gradient(circle at 30% 30%, #ffff7a, #d1d100, #9d9d00);
   --green-light: radial-gradient(circle at 30% 30%, #7aff7a, #00c000, #008a00);
@@ -9,7 +9,7 @@
   --housing-color: linear-gradient(145deg, #3a3a3a, #2a2a2a);
 }
 
-/* ساختار اصلی */
+
 .traffic-light-system {
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
   z-index: 2;
 }
 
-/* پایه چراغ */
+
 .traffic-light-stand {
   width: 30px;
   height: 120px;
@@ -40,7 +40,7 @@
   z-index: 1;
 }
 
-/* بدنه چراغ */
+
 .light-housing {
   background: var(--housing-color);
   border-radius: 15px;
@@ -53,7 +53,7 @@
   position: relative;
 }
 
-/* پایه بالایی */
+
 .traffic-light-base {
   width: 100px;
   height: 20px;
@@ -66,7 +66,7 @@
   margin-top: -5px;
 }
 
-/* چراغ‌ها */
+
 .light {
   position: relative;
   width: 80px;
@@ -92,7 +92,6 @@
   animation: light-pulse 2s infinite;
 }
 
-/* جلوه‌های نور */
 .light-core {
   position: absolute;
   width: 100%;
@@ -118,7 +117,6 @@
   animation: glow-pulse 2s infinite alternate;
 }
 
-/* انیمیشن‌ها */
 @keyframes light-pulse {
   0%, 100% { transform: scale(1.05); box-shadow: 0 0 20px 5px rgba(255,255,255,0.2); }
   50% { transform: scale(1.08); box-shadow: 0 0 30px 10px rgba(255,255,255,0.3); }
@@ -129,7 +127,6 @@
   100% { opacity: 0.9; transform: scale(1.05); }
 }
 
-/* حالت تغییر چراغ */
 .traffic-light.transitioning {
   transform: translateY(-5px) scale(0.98);
 }
@@ -157,7 +154,6 @@
   100% { opacity: 0; background: rgba(255,255,255,0); }
 }
 
-/* ریسپانسیو */
 @media (max-width: 768px) {
   .light {
     width: 60px;
