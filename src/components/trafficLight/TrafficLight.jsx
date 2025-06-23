@@ -4,12 +4,11 @@ import './TrafficLight.css';
 const TrafficLight = () => {
   const [activeLight, setActiveLight] = useState('red');
   
-  // حذف state ای که استفاده نمی‌شد
   const getDuration = (light) => {
     switch(light) {
-      case 'red': return 5000;    // 5 ثانیه
-      case 'green': return 4000;  // 4 ثانیه
-      case 'yellow': return 2000; // 2 ثانیه
+      case 'red': return 5000;    
+      case 'green': return 4000;  
+      case 'yellow': return 2000;
       default: return 2000;
     }
   }
